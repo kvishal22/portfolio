@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <title>
+      vishal's portfolio
+    </title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/8d8a6afeaf.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div class="header">
+
+      <div class="container">
+        <nav>
+          <ul>
+            <li><a href="#header">home</a></li>
+            <li><a href="#about">about</a></li>
+            <li><a href="#contact">contact</a></li>
+            <i class="fa-solid fa-xmark"></i>
+          </ul>
+          <i class="fa-solid fa-bars"></i>
+        </nav>
+        <div class="header-text">
+          <h1> hey, vishal kanna here :)</h1>
+          <p>java/springboot developer.</p> 
+        </div>
+      </div>
+      </div>
+
+      <div id="about">
+        <div class="container">
+          <div class="row">
+            <div class="aboutcol2">
+              <h1 class="subtitle">about me</h1>
+              <p class="sub">highly motivated software developer with 1 year of experience developing java-based applications using springboot and microservices architecture. seeking a challenging role to leverage my skills and contribute to innovative software solutions.</p>
+            <div class="tab-titles">
+              <p class="tab-links active-link" onclick="opentab('experience')">experience</p>
+              <p class="tab-links" onclick="opentab('languages')">languages</p>
+              <p class="tab-links" onclick="opentab('webframeworks')">webframeworks</p>
+              <p class="tab-links" onclick="opentab('testingtools')">testing tools</p>
+              <p class="tab-links" onclick="opentab('databases')">databases</p>
+
+            </div>
+
+            <div class="tab-contents" id="testingtools">
+              <ul>
+                <li>junit, mockito, spring test framework</li>
+              </ul>
+            </div>
+
+            <div class="tab-contents" id="languages">
+              <ul>
+                <li>java, javascript, c</li>
+
+              </ul>
+            </div>
+
+            <div class="tab-contents" id="databases">
+              <ul>
+                <li>mysql, mongodb hibernate for orm</li>
+
+              </ul>
+            </div>
+
+            <div class="tab-contents" id="webframeworks">
+              <ul>
+                <li>springboot, angular, jquery, microservices</li>
+
+              </ul>
+            </div>
+
+            <div class="tab-contents active-tab" id="experience">
+              <ul>
+                <li><span>2022-current</span><br>springboot developer at jeanmartin inc, chennai</li>
+                <li><span>2020-2022</span><br>customer support at amazon, coimbatore</li>
+                <li><span>2019-2020</span><br>support role at sutherland, chennai</li>
+
+              </ul>
+             
+            </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="contact">
+        <div class="container">
+          <div class="row">
+            <div class="contact-left">
+              <div class="social-icons">
+                <a href="https://github.com/vishalkundan" target="_blank"><i class="fa-brands fa-square-github"></i></a>
+                  <a href="https://twitter.com/vishalkanna_" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+                  <a href="https://www.reddit.com/user/vishalkanna" target="_blank"><i class="fa-brands fa-reddit"></i></a>
+              </div>
+            <!--  <a href="images/Vishal Kanna sept 3 resume.pdf" download class="button button2">download resume</a>
+            </div>
+            <div class="contact-right">
+              <form>
+                <input type="text" name="name" placeholder="your name" required>
+                <input type="text" name="email address" placeholder="your email " required>
+                <textarea name="message" rows="6" placeholder="your messsage"></textarea>
+                <button type="submit" class="button button2">submit</button>
+              </form> */
+            </div>-->
+          </div>
+        </div>
+      </div>
+      <script>
+
+        const tabLinks = document.getElementsByClassName("tab-links");
+        const tabContents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabName){
+            for(tabLink of tabLinks){
+              tabLink.classList.remove('active-link');
+            }
+            for(tabContent of tabContents){
+              tabContent.classList.remove('active-tab');
+            }
+            event.currentTarget.classList.add('active-link');
+            document.getElementById(tabName).classList.add('active-tab');
+        }
+
+
+
+      </script>
+  </body>
+</html>
